@@ -1,0 +1,330 @@
+# package.use# required by sys-kernel/genkernel-3.5.3.3::gentoo
+# required by sys-kernel/genkernel (argument)
+>=sys-apps/util-linux-2.33-r1 static-libs
+# required by sys-boot/os-prober-1.76-r1::gentoo
+# required by sys-boot/os-prober (argument)
+>=sys-boot/grub-2.02-r3 mount
+# required by www-client/firefox-60.6.2::gentoo
+# required by firefox (argument)
+>=dev-lang/python-2.7.15:2.7 sqlite
+# required by www-client/firefox-60.6.2::gentoo
+# required by firefox (argument)
+>=dev-lang/python-3.6.5 sqlite
+# required by x11-libs/libvdpau-1.1.1::gentoo
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=x11-libs/libX11-1.6.7 abi_x86_32
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=x11-libs/libXext-1.3.4 abi_x86_32
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=x11-libs/libvdpau-1.1.1 abi_x86_32
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=sys-libs/zlib-1.2.11-r2 abi_x86_32
+# required by x11-libs/libX11-1.6.7::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libvdpau-1.1.1::gentoo[dri]
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=x11-libs/libxcb-1.13.1 abi_x86_32
+# required by x11-libs/libxcb-1.13.1::gentoo
+# required by x11-libs/libX11-1.6.7::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libvdpau-1.1.1::gentoo[dri]
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=dev-libs/libpthread-stubs-0.4-r1 abi_x86_32
+# required by x11-libs/libxcb-1.13.1::gentoo
+# required by x11-libs/libX11-1.6.7::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libvdpau-1.1.1::gentoo[dri]
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=x11-libs/libXau-1.0.9 abi_x86_32
+# required by x11-libs/libxcb-1.13.1::gentoo
+# required by x11-libs/libX11-1.6.7::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libvdpau-1.1.1::gentoo[dri]
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=x11-libs/libXdmcp-1.1.3 abi_x86_32
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libvdpau-1.1.1::gentoo[dri]
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=virtual/pkgconfig-1 abi_x86_32
+# required by virtual/pkgconfig-1::gentoo
+# required by x11-drivers/nvidia-drivers-418.56::gentoo
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=dev-util/pkgconf-1.5.4 abi_x86_32
+# required by x11-libs/libxcb-1.13.1::gentoo
+# required by x11-libs/libX11-1.6.7::gentoo
+# required by x11-libs/libXext-1.3.4::gentoo
+# required by x11-libs/libvdpau-1.1.1::gentoo[dri]
+# required by x11-drivers/nvidia-drivers-418.56::gentoo[X]
+# required by x11-base/xorg-drivers-1.20::gentoo[video_cards_nvidia]
+# required by xorg-drivers (argument)
+>=x11-base/xcb-proto-1.13 abi_x86_32
+# required by app-misc/neofetch-6.0.0::gentoo[X]
+# required by neofetch (argument)
+>=www-client/w3m-0.5.3_p20180125 imlib
+# required by games-util/steam-client-meta-0-r20190506::steam-overlay
+# required by games-util/steam-meta-0-r20160817::steam-overlay
+# required by steam-meta (argument)
+>=virtual/opengl-7.0-r2 abi_x86_32
+# required by media-libs/mesa-18.3.6::gentoo[xvmc,gallium]
+# required by games-util/steam-games-meta-0-r20190316::steam-overlay
+# required by games-util/steam-meta-0-r20160817::steam-overlay[steamruntime]
+# required by steam-meta (argument)
+>=x11-libs/libXvMC-1.0.11 abi_x86_32
+# required by x11-libs/libXvMC-1.0.11::gentoo
+# required by media-libs/mesa-18.3.6::gentoo[xvmc,gallium]
+# required by games-util/steam-games-meta-0-r20190316::steam-overlay
+# required by games-util/steam-meta-0-r20160817::steam-overlay[steamruntime]
+# required by steam-meta (argument)
+>=x11-libs/libXv-1.0.11-r1 abi_x86_32
+# required by virtual/libffi-3.0.13-r1::gentoo
+# required by sys-devel/llvm-6.0.1::gentoo[libffi]
+# required by media-libs/mesa-18.3.6::gentoo[-video_cards_r600,-video_cards_radeon,llvm,-video_cards_radeonsi,-opencl]
+# required by games-util/steam-games-meta-0-r20190316::steam-overlay
+# required by games-util/steam-meta-0-r20160817::steam-overlay[steamruntime]
+# required by steam-meta (argument)
+>=dev-libs/libffi-3.2.1 abi_x86_32
+# required by sys-fs/udev-239::gentoo
+# required by virtual/libudev-232::gentoo[-static-libs,-systemd]
+# required by sys-apps/util-linux-2.33-r1::gentoo
+# required by dev-libs/glib-2.58.3::gentoo
+# required by dev-lang/vala-0.42.7::gentoo
+# required by gnome-base/dconf-0.30.1::gentoo
+>=sys-libs/libcap-2.26-r2 abi_x86_32
+# required by dev-libs/glib-2.58.3::gentoo
+# required by dev-lang/vala-0.42.7::gentoo
+# required by gnome-base/dconf-0.30.1::gentoo
+>=virtual/libintl-0-r2 abi_x86_32
+# required by sys-libs/libcap-2.26-r2::gentoo[pam]
+# required by sys-libs/pam-1.3.0-r2::gentoo[filecaps]
+>=virtual/pam-0-r1 abi_x86_32
+# required by virtual/pam-0-r1::gentoo
+# required by sys-libs/libcap-2.26-r2::gentoo[pam]
+# required by sys-fs/udev-239::gentoo
+# required by virtual/libudev-232::gentoo[-static-libs,-systemd]
+# required by sys-apps/util-linux-2.33-r1::gentoo
+# required by dev-libs/glib-2.58.3::gentoo
+# required by dev-lang/vala-0.42.7::gentoo
+# required by gnome-base/dconf-0.30.1::gentoo
+>=sys-libs/pam-1.3.0-r2 abi_x86_32
+# required by sys-libs/pam-1.3.0-r2::gentoo[cracklib]
+# required by virtual/pam-0-r1::gentoo
+# required by sys-libs/libcap-2.26-r2::gentoo[pam]
+# required by sys-fs/udev-239::gentoo
+# required by virtual/libudev-232::gentoo[-static-libs,-systemd]
+# required by sys-apps/util-linux-2.33-r1::gentoo
+# required by dev-libs/glib-2.58.3::gentoo
+# required by dev-lang/vala-0.42.7::gentoo
+# required by gnome-base/dconf-0.30.1::gentoo
+>=sys-libs/cracklib-2.9.6-r2 abi_x86_32
+# required by sys-libs/pam-1.3.0-r2::gentoo[berkdb]
+# required by virtual/pam-0-r1::gentoo
+# required by sys-libs/libcap-2.26-r2::gentoo[pam]
+# required by sys-fs/udev-239::gentoo
+# required by virtual/libudev-232::gentoo[-static-libs,-systemd]
+# required by sys-apps/util-linux-2.33-r1::gentoo
+# required by dev-libs/glib-2.58.3::gentoo
+# required by dev-lang/vala-0.42.7::gentoo
+# required by gnome-base/dconf-0.30.1::gentoo
+>=sys-libs/db-5.3.28-r2 abi_x86_32
+# required by sys-libs/pam-1.3.0-r2::gentoo
+# required by virtual/pam-0-r1::gentoo
+# required by sys-libs/libcap-2.26-r2::gentoo[pam]
+# required by sys-fs/udev-239::gentoo
+# required by virtual/libudev-232::gentoo[-static-libs,-systemd]
+# required by sys-apps/util-linux-2.33-r1::gentoo
+# required by dev-libs/glib-2.58.3::gentoo
+# required by dev-lang/vala-0.42.7::gentoo
+# required by gnome-base/dconf-0.30.1::gentoo
+>=sys-devel/flex-2.6.4-r1 abi_x86_32
+# required by media-libs/tiff-4.0.10::gentoo[jpeg]
+# required by x11-libs/gdk-pixbuf-2.38.1::gentoo[tiff]
+# required by dev-cpp/gtkmm-3.24.1::gentoo
+# required by media-sound/pavucontrol-4.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=virtual/jpeg-0-r3:0 abi_x86_32
+# required by virtual/jpeg-0-r3::gentoo
+# required by media-libs/tiff-4.0.10::gentoo[jpeg]
+# required by x11-libs/gdk-pixbuf-2.38.1::gentoo[tiff]
+# required by dev-cpp/gtkmm-3.24.1::gentoo
+# required by media-sound/pavucontrol-4.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/libjpeg-turbo-1.5.3-r2 abi_x86_32
+# required by media-plugins/alsa-plugins-1.1.8::gentoo
+# required by media-sound/pulseaudio-12.2-r1::gentoo[alsa,alsa-plugin]
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/alsa-lib-1.1.8 abi_x86_32
+# required by app-emulation/wine-vanilla-4.0::gentoo[lcms]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/lcms-2.9 abi_x86_32
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-sound/mpg123-1.25.10-r1 abi_x86_32
+# required by media-plugins/alsa-plugins-1.1.8::gentoo[pulseaudio]
+>=media-sound/pulseaudio-12.2-r1 abi_x86_32
+# required by app-emulation/wine-vanilla-4.0::gentoo[sdl]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/libsdl2-2.0.9 abi_x86_32 haptic
+# required by app-emulation/wine-vanilla-4.0::gentoo[xml]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=dev-libs/libxslt-1.1.32 abi_x86_32
+# required by app-emulation/wine-vanilla-4.0::gentoo[gecko]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=app-emulation/wine-gecko-2.47-r1 abi_x86_32
+# required by dev-libs/libxslt-1.1.32::gentoo[crypt]
+# required by app-emulation/wine-vanilla-4.0::gentoo[xml]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=dev-libs/libgcrypt-1.8.3 abi_x86_32
+# required by dev-libs/libgcrypt-1.8.3::gentoo
+# required by dev-libs/libxslt-1.1.32::gentoo[crypt]
+# required by app-emulation/wine-vanilla-4.0::gentoo[xml]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=dev-libs/libgpg-error-1.36 abi_x86_32
+# required by media-sound/pulseaudio-12.2-r1::gentoo
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/libsndfile-1.0.28-r4 abi_x86_32
+# required by media-sound/pulseaudio-12.2-r1::gentoo[X]
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=x11-libs/libSM-1.2.3 abi_x86_32
+# required by x11-libs/libSM-1.2.3::gentoo
+# required by media-sound/pulseaudio-12.2-r1::gentoo[X]
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=x11-libs/libICE-1.0.9-r2 abi_x86_32
+# required by media-sound/pulseaudio-12.2-r1::gentoo[X]
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=x11-libs/libXtst-1.2.3-r1 abi_x86_32
+# required by media-sound/pulseaudio-12.2-r1::gentoo[tcpd]
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=sys-apps/tcp-wrappers-7.6.22-r1 abi_x86_32
+# required by media-sound/pulseaudio-12.2-r1::gentoo[asyncns]
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=net-libs/libasyncns-0.8-r4 abi_x86_32
+# required by media-sound/pulseaudio-12.2-r1::gentoo[alsa,alsa-plugin]
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-plugins/alsa-plugins-1.1.8 abi_x86_32
+# required by media-libs/libsndfile-1.0.28-r4::gentoo[-minimal]
+# required by media-sound/pulseaudio-12.2-r1::gentoo
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/flac-1.3.2-r1 abi_x86_32
+# required by media-libs/libsndfile-1.0.28-r4::gentoo[-minimal]
+# required by media-sound/pulseaudio-12.2-r1::gentoo
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/libogg-1.3.3 abi_x86_32
+# required by media-libs/libsndfile-1.0.28-r4::gentoo[-minimal]
+# required by media-sound/pulseaudio-12.2-r1::gentoo
+# required by media-libs/libsdl-1.2.15-r9::gentoo[pulseaudio]
+# required by media-sound/mpg123-1.25.10-r1::gentoo[sdl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[mp3]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/libvorbis-1.3.6 abi_x86_32
+# required by media-libs/libsdl2-2.0.9::gentoo[opengl]
+# required by app-emulation/wine-vanilla-4.0::gentoo[sdl]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=virtual/glu-9.0-r2 abi_x86_32
+# required by virtual/glu-9.0-r2::gentoo
+# required by app-emulation/wine-vanilla-4.0::gentoo[opengl]
+# required by virtual/wine-0-r5::gentoo
+# required by wine (argument)
+>=media-libs/glu-9.0.0-r1 abi_x86_32
+# required by net-libs/webkit-gtk-2.24.1::gentoo
+# required by games-util/lutris-0.5.2.1::gentoo
+# required by lutris (argument)
+>=media-libs/harfbuzz-2.3.1 icu
+# required by dev-java/netbeans-platform-8.2::gentoo
+# required by dev-java/netbeans-harness-8.2::gentoo
+# required by dev-java/netbeans-ide-8.2::gentoo
+# required by dev-java/netbeans-nb-8.2::gentoo
+# required by dev-util/netbeans-8.2::gentoo
+# required by netbeans (argument)
+>=dev-java/junit-4.12-r1 source
+# required by dev-java/netbeans-platform-8.2::gentoo
+# required by dev-java/netbeans-harness-8.2::gentoo
+# required by dev-java/netbeans-ide-8.2::gentoo
+# required by dev-java/netbeans-nb-8.2::gentoo
+# required by dev-util/netbeans-8.2::gentoo
+# required by netbeans (argument)
+>=dev-java/swing-layout-1.0.4-r1 source
+# required by dev-java/netbeans-platform-8.2::gentoo
+# required by dev-java/netbeans-harness-8.2::gentoo
+# required by dev-java/netbeans-ide-8.2::gentoo
+# required by dev-java/netbeans-nb-8.2::gentoo
+# required by dev-util/netbeans-8.2::gentoo
+# required by netbeans (argument)
+>=dev-java/oracle-jdk-bin-1.8.0.202 javafx
+# required by www-client/firefox-68.1.0::gentoo[system-libvpx]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libvpx-1.7.0 postproc
+# required by www-client/firefox-68.1.0::gentoo[system-sqlite]
+# required by @selected
+# required by @world (argument)
+>=dev-db/sqlite-3.29.0 secure-delete

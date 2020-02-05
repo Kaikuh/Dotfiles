@@ -1,0 +1,50 @@
+#! /bin/sh
+
+# Monitors/Xorg conf
+
+xrandr --output DVI-D-0 --rotate left
+xsetroot -cursor_name left_ptr
+
+# Autostart
+
+compton --conf ~/.config/compton/compton.conf &
+polybar left &
+polybar right &
+sxhkd &
+ibus-daemon -drx &
+~/.fehbg &
+flashfocus &
+# Desktops
+
+bspc monitor DP-4 -d 1 2 3 4
+bspc monitor DVI-D-0 -d 5 6 7 8
+
+# Borders / Paddings
+
+bspc config border_width         0
+bspc config normal_border_color  "#ca91ad"
+bspc config focused_border_color "#d2d2d2"
+bspc config window_gap           5
+
+bspc config top_padding 26
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+
+# General
+
+bspc config automatic_scheme     longest_side
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config focus_by_distance    true
+bspc config history_aware_focus  true
+bspc config click_to_focus       true
+bspc config pointer_mod mod1
+bspc config pointer_action1 move
+
+# Rules
+
+bspc rule -a TelegramDesktop desktop=^5
+bspc rule -a discord desktop=^5
+bspc rule -a Emacs state=tiled

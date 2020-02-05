@@ -1,0 +1,163 @@
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+
+[bar/left]
+monitor = DP-4
+
+width = 100%
+height = 27
+;offset-x = 25%
+;offset-y = 0%
+fixed-center = true
+
+background = #090909
+foreground = #FE88BA
+
+line-size = 2
+line-color = #FE88BA
+underline-size = 4
+underline-color = #FE88BA
+
+spacing = 1
+padding-left = 3
+padding-right = 3
+module-margin-left = 0 
+module-margin-right = 0
+
+font-0 = Lucy Tewi:size=8;1
+font-1 = Wuncon Siji:size=5;1
+font-3 = Noto Sans CJK JP:size=10:antialias=true;0
+
+#tray-position = right
+#tray-padding = 0
+#tray-maxsize = 16
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+modules-center = xwindow
+modules-left = bspwm
+modules-right = time
+
+[bar/right]
+monitor = DVI-D-0
+
+width = 100%
+height = 27
+;offset-x = 25%
+;offset-y = 0%
+fixed-center = true
+
+background = #090909
+foreground = #FE88BA
+
+font-0 = Lucy Tewi:size=8;1
+font-1 = Wuncon Siji:size=10;1
+font-2 = Noto Sans CJK JP:size=8:antialias=true;0
+
+line-size = 2
+line-color = #FE88BA
+underline-size = 4
+underline-color = #FE88BA
+
+spacing = 1
+padding-left = 3
+padding-right = 3
+module-margin-left = 0 
+module-margin-right = 5
+
+#tray-position = right
+#tray-padding = 0
+#tray-maxsize = 16
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+modules-left = bspwm
+modules-center = mpd
+modules-right = date
+
+[module/xwindow]
+type = internal/xwindow
+label-font = 0
+format = <label>
+label = %title%
+label-maxlen = 75
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state> <label-mode>
+
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-default = ♥
+
+label-focused = %icon%
+;label-focused-background = #880000
+label-focused-underline= #FE88BA
+label-focused-padding = 4
+
+label-occupied = %icon%
+label-occupied-padding = 4
+
+label-urgent = %icon%
+label-urgent-padding = 4
+
+label-empty = %icon%
+label-empty-foreground = #d2d2d2
+label-empty-padding = 4
+
+[module/mpd]
+type = internal/mpd
+
+; Host where mpd is running (either ip or domain name)
+; Can also be the full path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600
+
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 1
+
+[module/volume]
+type = internal/volume
+speaker-mixer = Speaker
+headphone-mixer = Headphone
+headphone-id = 18
+mapped = true
+
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+
+format-muted-prefix = " "
+label-muted = MUTE
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+
+[module/date]
+type = internal/date
+interval = 30
+label =  %time%
+time =  %Y-%m-%d
+
+[module/time]
+type = internal/date
+interval = 30
+label =  %time%
+time =  %H:%M
+
