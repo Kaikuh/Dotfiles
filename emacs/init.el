@@ -1,6 +1,14 @@
-
-
 ;;uwu
+
+;; Add melpa and marmalade
+
+(require 'package)
+(add-to-list 'package-archives
+	     '("marmalade" . "http://marmalade-repo.org/packages/"))
+
+
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
 
 
 (package-initialize)
@@ -29,7 +37,7 @@
 
 ;; Default font slightly smaller.
 
-(set-face-attribute 'default nil :height 55)
+(set-face-attribute 'default nil :height 100)
 
 ;; Show matching parentecies globaly.
 
@@ -68,7 +76,46 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; Org conf
 
+(setq org-log-done t
+      org-todo-keywords '((sequence "TODO" "INPROGRESS" "DONE"))
+      org-todo-keyword-faces '(("INPROGRESS" . (:foreground "blue" :weight bold))))
+(add-hook 'org-mode-hook
+          (lambda ()
+            (flyspell-mode)))
+(add-hook 'org-mode-hook
+          (lambda ()
+            (writegood-mode)))
+
+(global-set-key (kbd "C-c a") 'org-agenda)
+(setq org-agenda-show-log t
+      org-agenda-todo-ignore-scheduled t
+      org-agenda-todo-ignore-deadlines t)
+(setq org-agenda-files (list "~/Dropbox/org/personal.org"))
+
+(setq org-plantuml-jar-path "~/.emacs.d/plantuml.jar")
+
+(require 'ob)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((shell . t)
+   (ditaa . t)
+   (plantuml . t)
+   (dot . t)
+   (ruby . t)
+   (js . t)
+   (C . t)))
+
+(setq org-src-fontify-natively t
+      org-confirm-babel-evaluate nil)
+
+(add-hook 'org-babel-after-execute-hook (lambda ()
+                                          (condition-case nil
+                                              (org-display-inline-images)
+                                            (error nil)))
+          'append)
 
 ;; Backup setup.
 
@@ -140,15 +187,6 @@
 ;; Section II: Packages                                                      ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Add melpa and marmalade
-
-(require 'package)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-
-
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
 
 ;; Hooks
 
@@ -211,7 +249,7 @@
    '("04589c18c2087cd6f12c01807eed0bdaa63983787025c209b89c779c61c3a4c4" default))
  '(js-indent-level 2)
  '(package-selected-packages
-   '(f auto-complete autopair powerline mew neotree counsel projectile prettier-js exec-path-from-shell json-mode pdf-tools tide web-mode markdown-mode company rainbow-mode linum-relative impatient-mode skewer-mode magit mmm-mode vue-mode cherry-blossom-theme gnu-elpa-keyring-update)))
+   '(flyspell-correct writegood-mode f auto-complete autopair powerline mew neotree counsel projectile prettier-js exec-path-from-shell json-mode pdf-tools tide web-mode markdown-mode company rainbow-mode linum-relative impatient-mode skewer-mode magit mmm-mode vue-mode cherry-blossom-theme gnu-elpa-keyring-update)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
