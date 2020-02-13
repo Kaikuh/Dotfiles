@@ -21,7 +21,7 @@
 
 ;; One line minibuffer
 
-(setq resize-mini-windows nil)
+;; (setq resize-mini-windows nil)
 
 ;; Disable Emacs splash screen.
 
@@ -36,12 +36,16 @@
 (setq browse-url-browser-function 'eww-browse-url)
 
 ;; Default font slightly smaller.
+;; Set default font
+(set-face-attribute 'default nil
+                    :family "Source Code Pro"
+                    :height 110
+                    :weight 'normal
+                    :width 'normal)
 
-(set-face-attribute 'default nil :height 100)
 
-;; Show matching parentecies globaly.
-
-(show-paren-mode 1)
+(show-paren-mode t)
+(setq show-paren-style 'expression)
 
 ;; Use UTF-8 by default
 
@@ -76,46 +80,6 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Org conf
-
-(setq org-log-done t
-      org-todo-keywords '((sequence "TODO" "INPROGRESS" "DONE"))
-      org-todo-keyword-faces '(("INPROGRESS" . (:foreground "blue" :weight bold))))
-(add-hook 'org-mode-hook
-          (lambda ()
-            (flyspell-mode)))
-(add-hook 'org-mode-hook
-          (lambda ()
-            (writegood-mode)))
-
-(global-set-key (kbd "C-c a") 'org-agenda)
-(setq org-agenda-show-log t
-      org-agenda-todo-ignore-scheduled t
-      org-agenda-todo-ignore-deadlines t)
-(setq org-agenda-files (list "~/Dropbox/org/personal.org"))
-
-(setq org-plantuml-jar-path "~/.emacs.d/plantuml.jar")
-
-(require 'ob)
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((shell . t)
-   (ditaa . t)
-   (plantuml . t)
-   (dot . t)
-   (ruby . t)
-   (js . t)
-   (C . t)))
-
-(setq org-src-fontify-natively t
-      org-confirm-babel-evaluate nil)
-
-(add-hook 'org-babel-after-execute-hook (lambda ()
-                                          (condition-case nil
-                                              (org-display-inline-images)
-                                            (error nil)))
-          'append)
 
 ;; Backup setup.
 
@@ -179,14 +143,39 @@
 
 ;; powerline
 
-(require 'powerline)
-(powerline-default-theme)
+;; (require 'powerline)
+;; (powerline-default-theme)
 
+;; If you want to use powerline, (require 'powerline) must be
+;; before (require 'moe-theme).
+(require 'powerline)
+
+;; Moe-theme
+(require 'moe-theme)
+(powerline-moe-theme)
+;; Show highlighted buffer-id as decoration. (Default: nil)
+(setq moe-theme-highlight-buffer-id t)
+
+;; Resize titles (optional).
+(setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
+(setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
+(setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
+
+;; Choose a color for mode-line.(Default: blue)
+(moe-theme-set-color 'cyan)
+
+;; Finally, apply moe-theme now.
+;; Choose what you like, (moe-light) or (moe-dark)
+(moe-light)
+
+;; icons theme
+(require 'all-the-icons)
+
+(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Section II: Packages                                                      ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;; Hooks
 
@@ -244,12 +233,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(cherry-blossom))
+ '(custom-enabled-themes '(moe-light))
  '(custom-safe-themes
-   '("04589c18c2087cd6f12c01807eed0bdaa63983787025c209b89c779c61c3a4c4" default))
+   '("7ed8866a84a70d0afb53c9b67eff51ef916e5c69b819324e8509ea98b0b448aa" "04589c18c2087cd6f12c01807eed0bdaa63983787025c209b89c779c61c3a4c4" default))
  '(js-indent-level 2)
  '(package-selected-packages
-   '(flyspell-correct writegood-mode f auto-complete autopair powerline mew neotree counsel projectile prettier-js exec-path-from-shell json-mode pdf-tools tide web-mode markdown-mode company rainbow-mode linum-relative impatient-mode skewer-mode magit mmm-mode vue-mode cherry-blossom-theme gnu-elpa-keyring-update)))
+   '(nyan-mode gnuplot org-scrum org-bullets sudo-edit all-the-icons moe-theme flyspell-correct writegood-mode f auto-complete autopair powerline mew neotree counsel projectile prettier-js exec-path-from-shell json-mode pdf-tools tide web-mode markdown-mode company rainbow-mode linum-relative impatient-mode skewer-mode magit mmm-mode vue-mode cherry-blossom-theme gnu-elpa-keyring-update)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
